@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown, MdLeaderboard } from 'react-icons/md';
 import { AiOutlineLogout, AiOutlineLogin, AiFillHome } from 'react-icons/ai';
+import NavbarContainer from './styled/NavbarContainer';
 
 function Navbar({ user, logOut }) {
   const authUser = user;
@@ -26,7 +27,7 @@ function Navbar({ user, logOut }) {
   }, []);
 
   return (
-    <div className="navbar">
+    <NavbarContainer className="navbar">
       <span className="navbar__title">
         <Link to="/"> SkuyForum</Link>
       </span>
@@ -82,7 +83,7 @@ function Navbar({ user, logOut }) {
           </div>
         )}
       </div>
-    </div>
+    </NavbarContainer>
   );
 }
 
