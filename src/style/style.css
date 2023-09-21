@@ -27,22 +27,6 @@ body {
   transition: all ease-in-out 0.5s;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 65px;
-  background-color: var(--main-color);
-  box-shadow: 0 4px 21px 0 #0000005f;
-  padding: 0 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  z-index: 99;
-}
-
 .loading {
   position: sticky;
   z-index: 100;
