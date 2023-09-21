@@ -5,6 +5,14 @@ import forum from '../../utils/api';
 import { receiveUsersActionCreator } from '../users/action';
 import { receiveAllThreadsActionCreator } from '../threads/action';
 
+/**
+ * skenario test
+ *
+ * - asyncPopulateUsersAndThreads thunk
+ *  - should dispatch action correctly when data fetching success
+ *  - should dispatch action correctly when data fetching failed
+ */
+
 const fakeAllUsersResponse = [
   {
     id: 'john_doe',

@@ -1,3 +1,13 @@
+// test scenario detailThread useReducer
+
+// -detailThreadReducer function
+// -should return inital state when given by unknown action
+// -should handle RECEIVE_DETAIL_THREAD action
+// -should handle UP_VOTE_THREAD_DETAIL action
+// -should handle DOWN_VOTE_THREAD_DETAIL action
+// -should handle UP_VOTE_THEAD_DETAIL_COMMENTS action
+// -should handle DOWN_VOTE_THEAD_DETAIL_COMMENTS action
+
 import { describe, it, expect } from 'vitest';
 import detailThreadReducer from './reducer';
 

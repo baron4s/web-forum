@@ -1,3 +1,9 @@
+// -RegisterInput
+//   -should handle name typing correctly
+//   -should handle email typing correctly
+//   -should handle password typing correctly
+//   -should call register function when submit button is clicked
+
 import React from 'react';
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
@@ -7,7 +13,7 @@ import RegisterInput from './RegisterInput';
 
 expect.extend(matchers);
 
-describe('LoginInput Component', () => {
+describe('RegisterInput Component', () => {
   afterEach(() => {
     cleanup();
   });

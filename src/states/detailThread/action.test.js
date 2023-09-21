@@ -5,6 +5,13 @@ import {
   upVoteDetailThreadActionCreator,
 } from './action';
 
+// skenario test
+// - asyncToggleUpVoteDetailThreadProcess thunk
+//  - should dispatch upVoteDetailThreadActionCreator when user is     authenticated
+//  - should dispatch action correctly when data fetching failed
+//  - should dispatch action correctly when data fetching failed
+//  - should display an alert when user is not authenticated
+
 const detailThread = {
   id: 'thread-1',
   title: 'Thread Pertama',

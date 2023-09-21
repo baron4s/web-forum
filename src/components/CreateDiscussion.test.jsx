@@ -1,3 +1,9 @@
+// -CreateDiscussion component
+//   -should handle title typing correctly
+//   -should handle category typing correctly
+//   -should handle discussion typing correctly
+//   -should call function handlerOnSubmit when create-button is clicked
+
 import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
