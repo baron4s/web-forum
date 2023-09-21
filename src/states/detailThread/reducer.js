@@ -26,7 +26,7 @@ function detailThreadReducer(detailThread = null, action = {}) {
           (id) => id !== action.payload.userId,
         ),
       };
-    case ActionType.UP_VOTE_THREAD_DETAIL_COMMENTS:
+    case ActionType.UP_VOTE_THREAD_DETAIL_COMMENT:
       return {
         ...detailThread,
         comments: detailThread.comments.map((comment) => {
