@@ -32,7 +32,7 @@ function FilterCategory({ categories, onClickCategory }) {
           className="toggle-category"
           onClick={() => setToggleFilter(!toggleFilter)}
         >
-          Kategori
+          Category
           <AiOutlineCaretDown style={{ marginLeft: '6px' }} />
         </button>
       </div>
