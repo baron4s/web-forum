@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import PropTypes from 'prop-types';
 import {
   AiFillDislike,
@@ -29,9 +30,10 @@ function DetailItem({
   downVoteCommentHandlers,
 }) {
   const [valueComments, setValueComments] = useInput();
-
   const isUpVoteThread = upVotesBy.includes(authUser);
   const isDownVoteThread = downVotesBy.includes(authUser);
+  const htmlContent = body;
+  const sanitizedHtmlContent = DOMPurify.sanitize(htmlContent);
 
   return (
     <div className="detail-item">
@@ -52,7 +54,7 @@ function DetailItem({
           <h2 className="title-discussion">{title}</h2>
           <p
             className="body-discussion"
-            dangerouslySetInnerHTML={{ __html: body }}
+            dangerouslySetInnerHTML={{ __html: sanitizedHtmlContent }}
           />
           <div className="vote">
             <div className="up-vote">

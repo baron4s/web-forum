@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import DOMPurify from 'dompurify';
 import {
   AiFillDislike,
   AiOutlineLike,
@@ -28,6 +29,9 @@ function ItemDiscussion({
   const isUpVoteThread = upVotes.includes(authUser);
   const isDownVoteThread = downVotes.includes(authUser);
 
+  const htmlContent = text;
+  const sanitizedHtmlContent = DOMPurify.sanitize(htmlContent);
+
   return (
     <div className="item-discussion">
       <div className="user">
@@ -41,7 +45,7 @@ function ItemDiscussion({
       </div>
       <div className="item-discussion-content">
         <Link to={`/detail/${id}`}>{title}</Link>
-        <p dangerouslySetInnerHTML={{ __html: text }} />
+        <p dangerouslySetInnerHTML={{ __html: sanitizedHtmlContent }} />
         <div className="item-discussion-content-category">
           <p>{`#${category}`}</p>
         </div>

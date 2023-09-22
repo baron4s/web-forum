@@ -23,6 +23,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/require-default-props": "off",
     "indent": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "react/no-danger": "off"
   }
 }

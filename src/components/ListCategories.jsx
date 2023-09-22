@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import ItemCategory from './ItemCategory';
 
 function ListCategories({ categories, onClickCategory, handleCategoryClick }) {
-  console.log(onClickCategory);
-
   return (
     <div className="list-categories ">
       {categories.map((item) => {

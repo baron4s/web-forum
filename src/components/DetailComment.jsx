@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 import PropTypes from 'prop-types';
 import {
   AiFillDislike,
@@ -21,6 +22,8 @@ function DetailComment({
 }) {
   const isUpvoteComment = upVotesBy.includes(authUser);
   const isDownVoteComment = downVotesBy.includes(authUser);
+  const htmlContent = content;
+  const sanitizedHtmlContent = DOMPurify.sanitize(htmlContent);
 
   return (
     <div className="detail-comment-user">
@@ -38,7 +41,7 @@ function DetailComment({
         </div>
       </section>
       <section className="body-comment">
-        <p dangerouslySetInnerHTML={{ __html: content }} />
+        <p dangerouslySetInnerHTML={{ __html: sanitizedHtmlContent }} />
         <div className="vote">
           <div className="up-vote">
             <button

@@ -10,11 +10,9 @@ import {
 } from '../states/threads/action';
 
 function HomePage() {
-  const {
-    threads = [],
-    users = [],
-    authUser = null,
-  } = useSelector((states) => states);
+  const { threads = [], users = [], authUser = null } = useSelector(
+    (states) => states,
+  );
   const [selectedCategory, setSelectedCategory] = useState('');
   const dispatch = useDispatch();
 
@@ -35,7 +33,6 @@ function HomePage() {
   };
 
   const handlerFilterCategory = (category) => {
-    console.log('category');
     setSelectedCategory(category);
   };
 
